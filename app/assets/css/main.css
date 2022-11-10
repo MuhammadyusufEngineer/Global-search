@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:regular,500,600,700,800,900);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro';
+}
+
+body {
+    background: #30838A;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.hover-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background-color: #30838A;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.hover-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.outline-text {
+    color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
+.outline-box {
+    outline: 1px solid #242731;
+}
+
+/* .categories-container {
+    height: 0;
+    visibility: hidden;
+}
+
+.categories-container.active {
+    visibility: visible;
+    height: auto;
+}
+
+.chevron.active {
+    transform: rotate(180deg);
+} */
